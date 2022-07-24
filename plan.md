@@ -76,4 +76,6 @@ Login.js
 
 //create login and register modules and components 1st 
 
-
+changes: moved navbar and app into Main, since Authorize is not needed;
+routed the navBar items to  Main, since its my main Route container
+Unsure if I need Authorized or App. May be able to do most of the Routes in Main. 
