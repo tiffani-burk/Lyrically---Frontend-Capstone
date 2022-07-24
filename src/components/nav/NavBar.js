@@ -25,6 +25,9 @@ export const NavBar = (props) => {
             <NavItem>
               <NavLink href="/create">Create</NavLink>
             </NavItem>
+            <NavItem>
+              <NavLink href="/login">Logout</NavLink>
+            </NavItem>
           </Nav>
         </Collapse>
       </Navbar>

@@ -7,6 +7,7 @@ import { Create } from "../newsongs/Create"
 import { Import } from "../newsongs/Import"
 import { AllSets } from "../sets/AllSets"
 import { AllSongs } from "../songs/AllSongs"
+import { SongDetails } from "../songs/SongDetails"
 
 
 
@@ -30,7 +31,7 @@ export const Main = () => {
                 <Route path="/setlists" element={<AllSets />}></Route>
                 <Route path="/import" element={< Import />}></Route>
                 <Route path="/create" element={<Create />}></Route>
-            </Route>
+               <Route path="/songs/:songId" element={<SongDetails />}></Route></Route>
         </Routes>
     )
 }
