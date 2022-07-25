@@ -31,7 +31,8 @@ export const Main = () => {
                 <Route path="/setlists" element={<AllSets />}></Route>
                 <Route path="/import" element={< Import />}></Route>
                 <Route path="/create" element={<Create />}></Route>
-               <Route path="/songs/:songId" element={<SongDetails />}></Route></Route>
+               <Route path="/songs/:songId" element={<SongDetails />}></Route></Route> 
         </Routes>
     )
 }
+//note: to route to a specific screen, based on the id, set the path to songs/:songId and invoke the component that you want rendored to that new screen in element.

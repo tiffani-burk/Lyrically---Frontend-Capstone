@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { CreatedSong } from "./CreatedSong"
 import "./Song.css"
+import { useNavigate } from "react-router-dom"
 
 
 //create a componenet that will set the initial state variable, fetch the songs from the api, give back the array of the songs from the api and invoke the state var funciton, therefore,
@@ -15,6 +16,8 @@ const [filteredSongs, setFilteredSongs] = useState([])
 //define the current user
 const localLyricUser = localStorage.getItem("lyric_user")
 const lyricUserObject = JSON.parse(localLyricUser)
+
+const navigate = useNavigate()
 
 
 //create a useEffect to fetch all of the songs
@@ -46,11 +49,14 @@ useEffect(
 )
 
 //return JXS list of all the songs, displaying the name and artist
+//add a button that will navigate to the create song page with the song form
 //use .map to loop through the above array of songs, which is is being stored to the "songs" variable
 //dont forget to add a fragment (parent) if there are multiple JSX items being returned
 //dont forget to add a unique react key, since we are iterating with .map
    return  <>
    <h2>Song List</h2>
+   <button onClick={() => navigate("/create")}>Add a Song</button>
+  
 
    <article>
     {
@@ -66,3 +72,4 @@ useEffect(
    
    </>
 }
+
