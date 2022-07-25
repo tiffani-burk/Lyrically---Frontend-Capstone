@@ -18,7 +18,7 @@ export const SongDetails = () => {
     //watching the songId state 
     useEffect(
         () => {
-            fetch(`http://localhost:8088/songs?_embed=${songId}`)
+            fetch(`http://localhost:8088/songs?_expand=${songId}`)
             .then(response => response.json())
             .then((data) => {
                 const singleSong = data[0]
