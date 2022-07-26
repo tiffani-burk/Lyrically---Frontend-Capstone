@@ -34,7 +34,7 @@ return <section>
     <h3>Set Details</h3>
     <div>Name: {set?.name}</div>
     <div>Date: {set?.gigDate}</div>
-    <div>Location: {set?.location}</div>
+    <div>Location: {set?.gigLocation}</div>
 </section>
 
 }

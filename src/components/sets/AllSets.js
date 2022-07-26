@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { useEffect } from "react"
+import { useNavigate } from "react-router-dom"
 import { CreatedSet } from "./CreatedSet"
 //create a componenet that will set the initial state variable to an empty array, fetch the songs from the api, give back the array of the songs from the api and invoke the state var funciton, therefore,
 //adding all the songs to the state variable. This function will return a list of the songs, using .map to iterate over the song array and return the name of the setlist and date, accessed with
@@ -14,6 +15,9 @@ export const AllSets = () => {
         //define the current user
         const localLyricUser = localStorage.getItem("lyric_user")
         const lyricUserObject = JSON.parse(localLyricUser)
+
+        //import useNavigate and set it to value of navigate, so we can add it to the button.
+        const navigate = useNavigate()
         
         //create a useEffect to fetch all of the songs
         useEffect(
@@ -48,15 +52,19 @@ export const AllSets = () => {
         //dont forget to add a unique react key, since we are iterating with .map
            return  <>
            <h3>Setslists</h3>
+           <button onClick={()=> {navigate(`/setlists/create`)}}>Add Setlist</button>
            <article>
             { 
              filteredSetlists.map(
                 (setlist) => <CreatedSet key={`setlist--${setlist.id}`} 
                 id={setlist.id}
                 name={setlist.name}
-                gigDate={setlist.gigDate} />)
+                gigDate={setlist.gigDate}
+                gigLocation={setlist.gigLocation} />)
            
             }
            </article>
            </>
 }
+//TO DO: Create the key represention of the songs on the setlist
+//Do I expand on the songs array and create an if statement to match the song.setListId to the setlist.id

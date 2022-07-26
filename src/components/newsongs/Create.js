@@ -1,3 +1,4 @@
+//Create song form
 //Create a component that returns a form with a fetch POST method, to POST the inputed data into songs 
 //step 1. add a button in allSongs (and the create button in nav) that will redirect to this form; button in allSongs has to have an onCLick that will navigate to this screen
 import { useState } from "react"
@@ -39,7 +40,7 @@ export const Create = () => {
         }
 
 
-        // TODO: Perform the fetch() to POST the object to the API
+        // Perform the fetch() to POST the object to the API
     
 
         return fetch(`http://localhost:8088/songs`, {
@@ -123,6 +124,6 @@ export const Create = () => {
 }
 
 
-//This will Routed and invoked in Main.js
+//This will be Routed and invoked in Main.js
 //after submit button is tapped, user is brought back to the all songs screen
 //create an onClick for the button and pass it the handleSave function, which is saving all the inputs

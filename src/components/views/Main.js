@@ -6,6 +6,7 @@ import { NavBar } from "../nav/NavBar"
 import { Create } from "../newsongs/Create"
 import { Import } from "../newsongs/Import"
 import { AllSets } from "../sets/AllSets"
+import { CreateSetlist } from "../sets/CreateSetlist"
 import { SetDetails } from "../sets/SetDetails"
 import { AllSongs } from "../songs/AllSongs"
 import { SongDetails } from "../songs/SongDetails"
@@ -34,6 +35,7 @@ export const Main = () => {
                 <Route path="/create" element={<Create />}></Route>
                 <Route path="/songs/:songId" element={<SongDetails />}></Route>
                 <Route path="/setlists/:setlistId" element={<SetDetails/>}></Route>
+                <Route path="/setlists/create" element={<CreateSetlist />}></Route>
             
             </Route> 
                
