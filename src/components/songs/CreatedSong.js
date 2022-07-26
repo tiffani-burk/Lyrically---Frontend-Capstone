@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom"
 
 
 //create a component that will accept a single song object as a prop
+//this component is returnigng a link to the song details and a delete song button
 export const CreatedSong = ({id, name, artist}) => {
 
     const navigate = useNavigate()
@@ -31,3 +32,5 @@ export const CreatedSong = ({id, name, artist}) => {
         </div>
     </section>
 }
+
+//this function is called in the AllSongs componenet, where all the songs are looped over. 

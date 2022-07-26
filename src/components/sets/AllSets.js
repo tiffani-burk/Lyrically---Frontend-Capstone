@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { useEffect } from "react"
+import { CreatedSet } from "./CreatedSet"
 //create a componenet that will set the initial state variable to an empty array, fetch the songs from the api, give back the array of the songs from the api and invoke the state var funciton, therefore,
 //adding all the songs to the state variable. This function will return a list of the songs, using .map to iterate over the song array and return the name of the setlist and date, accessed with
 // dot notation and string interpolation {setlist.name} {setlist.date}
@@ -50,20 +51,10 @@ export const AllSets = () => {
            <article>
             { 
              filteredSetlists.map(
-                (setlist) => {
-                    return <article>
-                        <div className="song-container">
-                            <div className="song-and-arist">
-                            <h4>{setlist.name}</h4>
-                            <h6>{setlist.gigDate}</h6>
-                            </div>
-                            <div className="dot-menu"></div>
-                        </div>
-    
-    
-                    </article>
-                }
-            )
+                (setlist) => <CreatedSet key={`setlist--${setlist.id}`} 
+                id={setlist.id}
+                name={setlist.name}
+                gigDate={setlist.gigDate} />)
            
             }
            </article>
