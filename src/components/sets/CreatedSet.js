@@ -2,31 +2,29 @@
 //this componenet will take the id, name and date of the object as props
 //dont forget to set up a Route that pairs with the "to" Link
 
-import { Link, useNavigate  } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 
 
 
 
-export const CreatedSet = ({id, name, gigDate}) => {
+export const CreatedSet = ({ id, name, gigDate, gigLocation, getAllSets }) => {
 
-    const navigate = useNavigate()
 
     const DeleteSetlist = (id) => {
-
-    
         fetch(`http://localhost:8088/setlists/${id}`, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json"
             }
-            })
+        })
             .then(response => response.json())
             .then(() => {
-                navigate(`/setlists`)
+                getAllSets()
             }
             )
     }
+
 
     return <section>
         <div className="song-container">
@@ -36,7 +34,10 @@ export const CreatedSet = ({id, name, gigDate}) => {
             </div>
             <Link to={`/setlists/${id}`}>View Setlist</Link>
 
-            <button onClick={()=> { DeleteSetlist(id)}}>Delete</button>
+            <button onClick={() => { DeleteSetlist(id) }}>Delete</button>
         </div>
-    </section> 
+    </section>
 }
+
+
+//getAllSets is the componenet on AllSets that is fetching the data for all the setlists

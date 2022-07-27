@@ -20,8 +20,8 @@ const lyricUserObject = JSON.parse(localLyricUser)
 const navigate = useNavigate()
 
 
-//create a useEffect to fetch all of the songs
-useEffect(
+//create a function to fetch all of the songs
+const getAllSongs =
     () => {
         fetch(`http://localhost:8088/songs`)
         
@@ -30,9 +30,13 @@ useEffect(
             setSongs(songsArray) //invoke setAllSOngs and pass in the songsArray data that was fetched
         })
    
-    },
-    []
-)
+    }
+
+    //create a useEffect to set the songs
+    useEffect(
+        () => { getAllSongs() },
+            []
+    )
 
 
 //create another useEffect and state var to check if the userId matches the userId on the song
@@ -66,7 +70,8 @@ useEffect(
             name={song.name}
             artist={song.artist}
             lyrics={song.lyrics}
-            songKey={song.key} />)
+            songKey={song.key}
+            getAllSongs={getAllSongs} />) //getAllSongs does not need () b/c it's not acting as a function in this instance
     }
    </article>
    

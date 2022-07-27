@@ -19,18 +19,22 @@ export const AllSets = () => {
         //import useNavigate and set it to value of navigate, so we can add it to the button.
         const navigate = useNavigate()
         
-        //create a useEffect to fetch all of the songs
-        useEffect(
+        //create a componenet that will to fetch all of the sets
+      const getAllSets = 
             () => {
                 fetch(`http://localhost:8088/setlists`)
                 .then(response => response.json()) //dont forget the () after .json!! 
                 .then((setsArray) => {
                     setAllSets(setsArray) //invoke setAllSOngs and pass in the songsArray data that was fetched
                 })
-            },
+            }
+           
+        
+        //sets all the setlists
+        useEffect(
+            () => { getAllSets() },
             []
         )
-        
 
         //create another useEffect to filter the setlists by userId. 
         //step 1, create another state variable for filteredSets
@@ -60,7 +64,8 @@ export const AllSets = () => {
                 id={setlist.id}
                 name={setlist.name}
                 gigDate={setlist.gigDate}
-                gigLocation={setlist.gigLocation} />)
+                gigLocation={setlist.gigLocation}
+                getAllSets={getAllSets} />)
            
             }
            </article>
