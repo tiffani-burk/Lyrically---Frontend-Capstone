@@ -1,13 +1,15 @@
 //create a componenet to display the songs in the specified set list
 
 import { useEffect, useState } from "react"
+import { Link } from "react-router-dom"
+
 
 
 //if song.setListId = setlist.id then show song in setlist
 //create a useEffect to filter through the songs in the setlist invoke getAllSongs in 
 
 
-export const SetListSongs = ({ setlistId }) => {
+export const SetListSongs = ({setlistId }) => {
     //create initial useState for songs
     const [setlistSongs, setSetListSongs] = useState([])
     //create a state to watch the above
@@ -65,7 +67,18 @@ export const SetListSongs = ({ setlistId }) => {
         <article>
             {
                 filteredBySet.map(song =>
-                    <div> {song.name} </div>
+                    <>
+                    <div className="song-container">
+                        <div className="song-and-artist">
+                            <div>Song Name: {song.name} </div>
+                            <div>Song Artist: {song.artist}</div>
+                        </div>
+                        <Link to={`/songs/${song.id}`}>
+                        View Song Details
+                        </Link>
+
+                    </div>
+                    </>
                 )
             }
         </article>

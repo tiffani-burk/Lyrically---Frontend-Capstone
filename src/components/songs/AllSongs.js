@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { CreatedSong } from "./CreatedSong"
 import "./Song.css"
 import { useNavigate } from "react-router-dom"
+import { SetListSongs } from "../sets/SetlistSongs"
 
 
 //create a componenet that will set the initial state variable, fetch the songs from the api, give back the array of the songs from the api and invoke the state var funciton, therefore,
@@ -66,13 +67,14 @@ useEffect(
    <article>
     {
        filteredSongs.map(
-            (song) => <CreatedSong key={`song--${song.id}`}
+            (song) => <CreatedSong key={`song--${song.id}`} 
             id={song.id}
             name={song.name}
             artist={song.artist}
             lyrics={song.lyrics}
             songKey={song.key}
-            getAllSongs={getAllSongs} />) //getAllSongs does not need () b/c it's not acting as a function in this instance
+            getAllSongs={getAllSongs} /> 
+            ) //getAllSongs does not need () b/c it's not acting as a function in this instance
     }
    </article>
    
