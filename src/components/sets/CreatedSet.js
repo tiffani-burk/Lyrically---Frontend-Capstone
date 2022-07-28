@@ -9,7 +9,7 @@ import { Link } from "react-router-dom"
 
 
 export const CreatedSet = ({ id, name, gigDate, gigLocation, getAllSets }) => {
-
+//create initial state for setlists
 
     const DeleteSetlist = (id) => {
         fetch(`http://localhost:8088/setlists/${id}`, {
@@ -24,7 +24,7 @@ export const CreatedSet = ({ id, name, gigDate, gigLocation, getAllSets }) => {
             }
             )
     }
-
+   
 
     return <section>
         <div className="song-container">
@@ -38,6 +38,7 @@ export const CreatedSet = ({ id, name, gigDate, gigLocation, getAllSets }) => {
         </div>
     </section>
 }
+
 
 
 //getAllSets is the componenet on AllSets that is fetching the data for all the setlists

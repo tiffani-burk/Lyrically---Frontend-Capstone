@@ -4,6 +4,7 @@
 
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
+import { SetListSongs } from "./SetlistSongs"
 
 
 export const SetDetails = () => {
@@ -13,6 +14,7 @@ export const SetDetails = () => {
 //the initial value of this state is an empty object 
 
 const {setlistId} = useParams()
+
 const [set, updateSet] = useState({})
 
 //set up a useEffect to fetch the details on the setlist by accessing the
@@ -35,8 +37,8 @@ return <section>
     <div>Name: {set?.name}</div>
     <div>Date: {set?.gigDate}</div>
     <div>Location: {set?.gigLocation}</div>
+    <div>Songs in the Set: "Insert Songs Here" <SetListSongs setlistId={setlistId} /> </div>
 </section>
 
 }
 
-{/* <div>Songs on set: {set?.name}</div> */}
