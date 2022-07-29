@@ -11,3 +11,8 @@ padding: 1rem;
         background-size: 100% 33.33%;
     
 }
+
+.lyrics {
+        line-height: 150%;
+        white-space: pre-line;
+}

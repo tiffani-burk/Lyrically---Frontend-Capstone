@@ -3,6 +3,7 @@ import { Routes, Route, Outlet } from "react-router-dom"
 import { Login } from "../auth/Login"
 import { Register } from "../auth/Register"
 import { NavBar } from "../nav/NavBar"
+import { AddSongsToSet } from "../newsongs/AddSongToSet"
 import { Create } from "../newsongs/Create"
 import { Import } from "../newsongs/Import"
 import { AllSets } from "../sets/AllSets"
@@ -36,6 +37,7 @@ export const Main = () => {
                 <Route path="/songs/:songId" element={<SongDetails />}></Route>
                 <Route path="/setlists/:setlistId" element={<SetDetails/>}></Route>
                 <Route path="/setlists/create" element={<CreateSetlist />}></Route>
+                <Route path="setlist/addsongs" element={<AddSongsToSet />}></Route> 
             
             </Route> 
                

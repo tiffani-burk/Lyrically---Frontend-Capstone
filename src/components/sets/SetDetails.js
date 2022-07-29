@@ -8,37 +8,37 @@ import { SetListSongs } from "./SetlistSongs"
 
 
 export const SetDetails = () => {
-//set an initial state variable to represent the updated state
-//set up the useParams to return an object that has the params that match the URL
-//the useParams value will be the set to the param we made up in the Route on main.js that invokes this function 
-//the initial value of this state is an empty object 
+    //set an initial state variable to represent the updated state
+    //set up the useParams to return an object that has the params that match the URL
+    //the useParams value will be the set to the param we made up in the Route on main.js that invokes this function 
+    //the initial value of this state is an empty object 
 
-const {setlistId} = useParams()
+    const { setlistId } = useParams()
 
-const [set, updateSet] = useState({})
+    const [set, updateSet] = useState({})
 
-//set up a useEffect to fetch the details on the setlist by accessing the
-//setId of the sets and returning an object to us (as defined in the useState)
-//watching the setId state
+    //set up a useEffect to fetch the details on the setlist by accessing the
+    //setId of the sets and returning an object to us (as defined in the useState)
+    //watching the setId state
 
-useEffect(
-    () => {
-        fetch(`http://localhost:8088/setlists/${setlistId}`)
-        .then(response => response.json())
-        .then((data) => {
-            updateSet(data)
-        }) 
-    },
-    [setlistId] //observing when the state of useParams changed with this id
-)
-//return JSX that displays name, gigDate, location and all the songs in the set. 
-return <section>
-    <h3>Set Details</h3>
-    <div>Name: {set?.name}</div>
-    <div>Date: {set?.gigDate}</div>
-    <div>Location: {set?.gigLocation}</div>
-    <div>Songs in the Set: "Insert Songs Here" <SetListSongs setlistId={setlistId} /> </div>
-</section>
+    useEffect(
+        () => {
+            fetch(`http://localhost:8088/setlists/${setlistId}`)
+                .then(response => response.json())
+                .then((data) => {
+                    updateSet(data)
+                })
+        },
+        [setlistId] //observing when the state of useParams changed with this id
+    )
+    //return JSX that displays name, gigDate, location and all the songs in the set. 
+    return <section>
+        <h3>Set Details</h3>
+        <div>Name: {set?.name}</div>
+        <div>Date: {set?.gigDate}</div>
+        <div>Location: {set?.gigLocation}</div>
+        <div>Songs in the Set: "Insert Songs Here" <SetListSongs setlistId={setlistId} /> </div>
+    </section>
 
 }
 

@@ -1,7 +1,7 @@
 //create a componenet to display the songs in the specified set list
 
 import { useEffect, useState } from "react"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
 
 
@@ -22,6 +22,8 @@ export const SetListSongs = ({setlistId }) => {
     //define the current user
     const localLyricUser = localStorage.getItem("lyric_user")
     const lyricUserObject = JSON.parse(localLyricUser)
+
+    const navigate = useNavigate()
 
     //create a funciton to fetch all the songs
     const GetSetListSongs = () => {
@@ -61,9 +63,12 @@ export const SetListSongs = ({setlistId }) => {
         []
     )
 
+
+
     //return JXS list of songs in the setlist
     return <>
         <h2>List of songs in set</h2>
+        <button onClick={()=> {navigate(`/setlist/addsongs`)}}>Add Song</button>
         <article>
             {
                 filteredBySet.map(song =>
@@ -77,6 +82,7 @@ export const SetListSongs = ({setlistId }) => {
                         View Song Details
                         </Link>
 
+                    <button onClick={() => {} }>Delete</button>
                     </div>
                     </>
                 )
@@ -87,4 +93,5 @@ export const SetListSongs = ({setlistId }) => {
 }
 
 
-//TODO fix this component! Needs to show all the songs in the setlist 
+//TODO add a delete onClick with component fetching the songs by id to delete
+//invoke that component inside the button onclick

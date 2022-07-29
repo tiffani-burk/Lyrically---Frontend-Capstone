@@ -34,7 +34,7 @@ return <section className="song-dets">
     <div><strong>Artist: </strong>{song?.artist} </div>
     <div><strong>Key: </strong>{song?.key} </div>
     <div><strong>Time Signature: </strong>{song?.timeSignature} </div>
-    <div><strong>Lyrics: </strong>{song?.lyrics} </div>
+    <div><strong>Lyrics: </strong></div> <div className="lyrics">{song?.lyrics} </div>
 
 </section>
 
