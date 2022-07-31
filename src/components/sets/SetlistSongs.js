@@ -14,10 +14,10 @@ export const SetListSongs = ({setlistId }) => {
     const [setlistSongs, setSetListSongs] = useState([])
     //create a state to watch the above
     const [filteredbyuser, setFilteredByUser] = useState([])
-    //create initial useState for setlists 
-    const [setlists, setSetlists] = useState([])
     //create a state to watch the setlists
     const [filteredBySet, setFIlteredBySet] = useState([])
+    const [deletedSongs, setDeletedSongs] = useState([])
+    
 
     //define the current user
     const localLyricUser = localStorage.getItem("lyric_user")
@@ -62,9 +62,22 @@ export const SetListSongs = ({setlistId }) => {
         },
         []
     )
+        
+  //create another useEffect to watch for a deleted song
+    const deletedSong = (id) =>{
+        fetch(`http://localhost:8088/songs/${id}`, {
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json"
+            }
+        })
+        .then(response => response.json())
+        .then(() => {
+          navigate(`/setlist/${id}`)
+        })
+    }
 
-
-
+  
     //return JXS list of songs in the setlist
     return <>
         <h2>List of songs in set</h2>
@@ -82,7 +95,7 @@ export const SetListSongs = ({setlistId }) => {
                         View Song Details
                         </Link>
 
-                    <button onClick={() => {} }>Delete</button>
+                    <button onClick={() => {deletedSong(song.id)} }>Delete</button>
                     </div>
                     </>
                 )

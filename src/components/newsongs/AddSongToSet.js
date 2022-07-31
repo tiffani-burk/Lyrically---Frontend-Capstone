@@ -2,6 +2,7 @@
 //this componenet will show a list of all the songs with an add to set ability 
 //trying to get it to show all songs, then just users songs
 import { useEffect, useState } from "react"
+import { useNavigate } from "react-router-dom"
 
 
 export const AddSongsToSet = () => {
@@ -40,6 +41,18 @@ export const AddSongsToSet = () => {
         },
         [songs]
     )
+    const navigate = useNavigate()
+
+    //if the button below is clicked, the song clicked will be added to setlist/{id}
+    const addSong = (id) => {
+        fetch(`http://localhost:3000/setlists/${id}`)
+        .then(response => response.json())
+        .then(() => {
+        navigate(`/setlists/${id}`)
+        })
+
+    }
+
 
     return <>
         <h2> adding songs</h2>
@@ -53,7 +66,7 @@ export const AddSongsToSet = () => {
                         <h5>{song.name}</h5>
                         <h6>{song.artist}</h6>
                         </div>
-                        <button> Add Song</button>
+                        <button onClick={() => {addSong(song.id)}}> Add Song</button>
                         </div>
                     }
 
