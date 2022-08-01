@@ -3,11 +3,16 @@
 //trying to get it to show all songs, then just users songs
 import { useEffect, useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
+import { NavItem } from "reactstrap"
+import "./AddSongs.css"
+
 
 
 export const AddSongsToSet = () => {
     //create initial state
     const [songs, getSongs] = useState([])
+       //import useNavigate and set it to value of navigate, so we can add it to the button.
+   const navigate = useNavigate()
 
     const setlistId = useParams()
     console.log(setlistId.setlistId)
@@ -52,7 +57,10 @@ export const AddSongsToSet = () => {
             })
     }
 
-
+//create a function to navigate back to the setlist via id and invoke it in the button "Submit Songs"
+const BackToSet = () => {
+    navigate(`/setlists/${setlistId.setlistId}`)
+}
 
     return <>
         <h2> adding songs</h2>
@@ -74,5 +82,10 @@ export const AddSongsToSet = () => {
                 )
             }
         </article>
+            <section className="submit-songs-btn">
+                <button onClick={BackToSet}>
+                    Submit Songs
+                </button>
+            </section>
     </>
 }
