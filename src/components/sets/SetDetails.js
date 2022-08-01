@@ -33,11 +33,13 @@ export const SetDetails = () => {
     )
     //return JSX that displays name, gigDate, location and all the songs in the set. 
     return <section>
-        <h3>Set Details</h3>
+        <h2>Set Details</h2>
+        <div className="set-dets-style">
         <div>Name: {set?.name}</div>
         <div>Date: {set?.gigDate}</div>
         <div>Location: {set?.gigLocation}</div>
-        <div>Songs in the Set: "Insert Songs Here" <SetListSongs setlistId={setlistId} /> </div>
+        </div>
+        <div> <SetListSongs setlistId={setlistId} /> </div>
     </section>
 
 }

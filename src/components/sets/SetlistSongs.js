@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
+import "./allSets.css"
 
 
 
@@ -80,19 +81,20 @@ export const SetListSongs = ({setlistId }) => {
   
     //return JXS list of songs in the setlist
     return <>
-        <h2>List of songs in set</h2>
-        <button onClick={()=> {navigate(`/setlist/addsongs`)}}>Add Song</button>
+
+        <div className="add-container">
+        <button className="add-btn" onClick={()=> {navigate(`/setlist/addsongs`)}}>Add Song</button>
+        </div>
         <article>
             {
                 filteredBySet.map(song =>
                     <>
                     <div className="song-container">
+                        <Link className="view-set-container" to={`/songs/${song.id}`}>
                         <div className="song-and-artist">
-                            <div>Song Name: {song.name} </div>
-                            <div>Song Artist: {song.artist}</div>
+                            <div> <strong>Name:</strong>  {song.name} </div>
+                            <div> <strong>Artist: </strong> {song.artist}</div>
                         </div>
-                        <Link to={`/songs/${song.id}`}>
-                        View Song Details
                         </Link>
 
                     <button onClick={() => {deletedSong(song.id)} }>Delete</button>

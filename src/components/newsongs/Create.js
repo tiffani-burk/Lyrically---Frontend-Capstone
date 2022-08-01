@@ -3,7 +3,7 @@
 //step 1. add a button in allSongs (and the create button in nav) that will redirect to this form; button in allSongs has to have an onCLick that will navigate to this screen
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
-
+import "./CreateForm.css"
 
 
 export const Create = () => {
@@ -109,7 +109,6 @@ export const Create = () => {
                         type="text"
                         id="lyrics"
                         className="form-control"
-                        placeholder="Fill in the lyrics"
                         value={song.lyrics} />
 
                 </div>

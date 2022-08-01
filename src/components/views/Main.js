@@ -6,6 +6,7 @@ import { NavBar } from "../nav/NavBar"
 import { AddSongsToSet } from "../newsongs/AddSongToSet"
 import { Create } from "../newsongs/Create"
 import { Import } from "../newsongs/Import"
+import { SongContainer } from "../newsongs/SongContainer"
 import { AllSets } from "../sets/AllSets"
 import { CreateSetlist } from "../sets/CreateSetlist"
 import { SetDetails } from "../sets/SetDetails"
@@ -20,10 +21,13 @@ export const Main = () => {
         <Routes>
             <Route path="/" element={
                 <>
+                <header>
                     {<NavBar />}
-                    <h1>Lyrically</h1>
-                    <div>Your digital setlist...</div>
-
+                    <div className="logo">
+                        <h1>Lyrically</h1>
+                        <h6>Your digital setlist...</h6>
+                    </div>
+                    </header>
                     <Outlet />
                 </>
             }>
@@ -32,7 +36,7 @@ export const Main = () => {
                 <Route path="/register" element={<Register />}></Route>
                 <Route path="/allsongs" element={<AllSongs />}></Route>
                 <Route path="/setlists" element={<AllSets />}></Route>
-                <Route path="/import" element={< Import />}></Route>
+                <Route path="/import" element={< SongContainer />}></Route>
                 <Route path="/create" element={<Create />}></Route>
                 <Route path="/songs/:songId" element={<SongDetails />}></Route>
                 <Route path="/setlists/:setlistId" element={<SetDetails/>}></Route>

@@ -22,15 +22,12 @@ const DeleteSongListItem = (id) => {
 
         return <section className="created-song">
         <div className="song-container"> 
+            <Link className="view-song-container" to={`/songs/${id}`}>
         <div className="song-and-artist">
             <div><strong>Song: </strong> {name}</div>
-            <div>Artist: {artist}</div>
+            <div><strong>Artist:</strong> {artist}</div>
             </div>
-
-            <Link to={`/songs/${id}`}>
-                View Song Details
             </Link>
-
             <button onClick={() => { DeleteSongListItem(id)}}>Delete</button>
         </div>
     </section>

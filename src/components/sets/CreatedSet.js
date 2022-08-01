@@ -28,12 +28,13 @@ export const CreatedSet = ({ id, name, gigDate, gigLocation, getAllSets }) => {
 
     return <section>
         <div className="song-container">
+            <Link className="view-set-container" to={`/setlists/${id}`}>
             <div className="song-and-artist">
-                <div> Set Name: {name}</div>
-                <div> Gig Date: {gigDate}</div>
+                <div><strong> Set Name:</strong> {name}</div>
+                <div> <strong> Gig Date: </strong>{gigDate}</div>
             </div>
-            <Link to={`/setlists/${id}`}>View Setlist</Link>
 
+            </Link>
             <button onClick={() => { DeleteSetlist(id) }}>Delete</button>
         </div>
     </section>

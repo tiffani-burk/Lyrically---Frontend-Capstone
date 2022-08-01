@@ -2,7 +2,6 @@ import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import "./Login.css"
 import { Link } from "react-router-dom"
-
 export const Register = (props) => {
     const [user, setUser] = useState({
         email: "",
@@ -56,6 +55,7 @@ export const Register = (props) => {
 
     return (
         <main style={{ textAlign: "center" }}>
+            <img src={"./lyrically-logo.jpg"} />
             <form className="form--login" onSubmit={handleRegister}>
                 <h1 className="h3 mb-3 font-weight-normal">Please Register for Lyrically</h1>
                 <fieldset>
@@ -72,7 +72,7 @@ export const Register = (props) => {
                 </fieldset>
                
                 <fieldset>
-                    <button type="submit"> Register </button>
+                    <button type="submit"> Sign Up </button>
                 </fieldset>
             
             </form>

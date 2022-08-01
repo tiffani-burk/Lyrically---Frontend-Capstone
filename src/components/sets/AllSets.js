@@ -2,6 +2,7 @@ import { useState } from "react"
 import { useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 import { CreatedSet } from "./CreatedSet"
+import "./allSets.css"
 //create a componenet that will set the initial state variable to an empty array, fetch the songs from the api, give back the array of the songs from the api and invoke the state var funciton, therefore,
 //adding all the songs to the state variable. This function will return a list of the songs, using .map to iterate over the song array and return the name of the setlist and date, accessed with
 // dot notation and string interpolation {setlist.name} {setlist.date}
@@ -55,8 +56,12 @@ export const AllSets = () => {
         //dont forget to add a fragment (parent) if there are multiple JSX items being returned
         //dont forget to add a unique react key, since we are iterating with .map
            return  <>
-           <h3>Setslists</h3>
+           <div className="header-btn-container">
+           <h2>Setlists</h2>
+           <div className="add-btn">
            <button onClick={()=> {navigate(`/setlists/create`)}}>Add Setlist</button>
+           </div>
+           </div>
            <article>
             { 
              filteredSetlists.map(

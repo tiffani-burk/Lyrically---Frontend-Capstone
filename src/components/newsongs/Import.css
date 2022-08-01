@@ -1,0 +1,11 @@
+.import-search-box {
+    margin: 1rem;
+    
+}
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20rem;
+    flex-direction: column;
+}

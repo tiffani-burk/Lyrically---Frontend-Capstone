@@ -3,7 +3,7 @@ import { CreatedSong } from "./CreatedSong"
 import "./Song.css"
 import { useNavigate } from "react-router-dom"
 import { SetListSongs } from "../sets/SetlistSongs"
-
+import "./songs.css"
 
 //create a componenet that will set the initial state variable, fetch the songs from the api, give back the array of the songs from the api and invoke the state var funciton, therefore,
 //adding all the songs to the state variable to an empty array. This function will return a list of the songs, using .map to iterate over the song array and return the name of the song and the artist of the song, accessed with
@@ -54,15 +54,19 @@ useEffect(
 )
 
 
+
+
 //return JXS list of all the songs, displaying the name and artist
 //add a button that will navigate to the create song page with the song form
 //use .map to loop through the above array of songs, which is is being stored to the "songs" variable
 //dont forget to add a fragment (parent) if there are multiple JSX items being returned
 //dont forget to add a unique react key, since we are iterating with .map
    return  <>
-   <h2>Song List</h2>
-   <button onClick={() => navigate("/create")}>Add a Song</button>
   
+   <div className="add-btn">
+   <h2>Song Library</h2>
+   <button  onClick={() => navigate("/create")}>Add a Song</button>
+   </div>
 
    <article>
     {

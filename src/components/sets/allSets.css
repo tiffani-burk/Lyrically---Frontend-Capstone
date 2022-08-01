@@ -1,0 +1,28 @@
+.add-btn {
+    display: flex;
+    justify-content: flex-end;
+    margin: 1rem;
+    }
+
+.view-set-container {
+width: 100%;
+}
+
+.song-container {
+    box-shadow: 10px 5px 10px lightgrey;
+}
+
+.header-btn-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.add-container {
+    display: flex;
+    justify-content: right;
+}
+
+.set-dets-style {
+    margin: 1rem;
+}

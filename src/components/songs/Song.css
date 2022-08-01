@@ -16,3 +16,6 @@ padding: 1rem;
         line-height: 150%;
         white-space: pre-line;
 }
+.view-song-container {
+        width: 100%;
+}
