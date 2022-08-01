@@ -36,8 +36,8 @@ export const SetListSongs = ({setlistId }) => {
     )
         
   //create another useEffect to watch for a deleted song
-    const deletedSong = (id) =>{
-        fetch(`http://localhost:8088/setListSongs`, {
+    const deletedSong = (item) =>{
+        fetch(`http://localhost:8088/setListSongs/${item.id}`, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json"
@@ -46,6 +46,7 @@ export const SetListSongs = ({setlistId }) => {
         .then(response => response.json())
         .then(() => {
           console.log(`deleted songs`)
+            GetSetListSongs()
         })
     }
 
@@ -71,7 +72,7 @@ export const SetListSongs = ({setlistId }) => {
                         </div>
                         </Link>
 
-                    <button onClick={() => {deletedSong(setlistSong.id)} }>Delete</button>
+                    <button onClick={() => {deletedSong(setlistSong)} }>Delete</button>
                     </div>
                     </> )
                     }}

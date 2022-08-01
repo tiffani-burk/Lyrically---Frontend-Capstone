@@ -3,7 +3,6 @@
 //trying to get it to show all songs, then just users songs
 import { useEffect, useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
-import { NavItem } from "reactstrap"
 import "./AddSongs.css"
 
 
@@ -63,8 +62,7 @@ const BackToSet = () => {
 }
 
     return <>
-        <h2> adding songs</h2>
-        <p>Add songs to your setlist</p>
+        <h2> Add Songs to Your Setlist</h2>
         <article>
             {
                 songs.map(
