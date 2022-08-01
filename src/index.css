@@ -16,6 +16,7 @@ button {
   background-color: rgb(90, 17, 90);
   border-radius: 8%;
   color: white;
+  align-items: center;
 }
 
 header {

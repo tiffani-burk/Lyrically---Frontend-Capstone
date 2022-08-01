@@ -41,7 +41,7 @@ export const Main = () => {
                 <Route path="/songs/:songId" element={<SongDetails />}></Route>
                 <Route path="/setlists/:setlistId" element={<SetDetails/>}></Route>
                 <Route path="/setlists/create" element={<CreateSetlist />}></Route>
-                <Route path="setlist/addsongs" element={<AddSongsToSet />}></Route> 
+                <Route path="setlist/addsongs/:setlistId" element={<AddSongsToSet />}></Route> 
             
             </Route> 
                

@@ -8,107 +8,66 @@ import { useNavigate, useParams } from "react-router-dom"
 export const AddSongsToSet = () => {
     //create initial state
     const [songs, getSongs] = useState([])
-    const [filterSongs, setFilterSong] = useState([])
-    const [addedSongs, setAddedSongs] = useState([])
 
-    //define the current user
-    const localLyricUser = localStorage.getItem("lyric_user")
-    const lyricUserObject = JSON.parse(localLyricUser)
-
+    const setlistId = useParams()
+    console.log(setlistId.setlistId)
     // // /create a function to fetch all of the songs
     const getAllSongs =
         () => {
             fetch(`http://localhost:8088/songs`)
-            
-            .then(response => response.json())
-            .then((songsArray) => {
-                getSongs(songsArray) //invoke setAllSOngs and pass in the songsArray data that was fetched
-            })
-       
+
+                .then(response => response.json())
+                .then((songsArray) => {
+                    getSongs(songsArray) //invoke setAllSOngs and pass in the songsArray data that was fetched
+                })
+
         }
-    
-        //create a useEffect to set the songs
-        useEffect(
-            () => { getAllSongs() },
-                []
-        )
-    
-    
-    // // create a useEffect that watches the state of songs to change and when it doesn, useEffect triggers to match the userId on song to the users id
+
+    //create a useEffect to set the songs
     useEffect(
-        () => {
-            const userSongs = songs.filter(song => song.userId === lyricUserObject.id)
-            setFilterSong(userSongs)
-        },
-        [songs]
+        () => { getAllSongs() },
+        []
     )
 
-const getAddedSongs = 
-        () => {
-            fetch(`http://localhost:8088/setListSongs?_expand=song`)
-            .then(response => response.json())
-            .then((data) => {
-                setAddedSongs(data)
-            } )
-
+    //create a function that will take a songid as an arg, will then create an obj that has the songId, the setlistId and song position of 0 and will POST to DB
+    const AddingTheSongsToTheSet = (id) => {
+        //Create an object to be saved to the API that looks like my object data in songs;
+        const SendSongToSetInAPI = {
+            songId: id,
+            setListId: parseInt(setlistId.setlistId),
+            songPosition: 0
         }
+        // Perform the fetch() to POST the object to the API
 
-        useEffect(
-            () => {
-                getAddedSongs()
-            }, []
-        )
-
-    // useEffect(
-    //     () => {
-    //         const addedSong = addedSongs.filter(addedSong => addedSong.setlistId === setlist.id)
-    //         setAddedSongs(addedSong)
-
-    //     },
-    //      [ filterSongs ]
-    // )
-    // const navigate = useNavigate()
-
-// const [setlistObject, setSetlistsObj] = useState({})
-// const [setlistId] = useParams()
-
-//     //if the button below is clicked, the song clicked will be added to setlist/{id}
-// useEffect(
-//     () => {
-//         fetch(`http://localhost:8088/setlists?id=${setlistId}`)
-//         .then(response => response.json())
-//         .then((setlistObj)=> {
-//             setSetlistsObj(setlistObj)
-//         })
-//     },
-//     [setlistId]
-// )
+        return fetch(`http://localhost:8088/setListSongs`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(SendSongToSetInAPI)
+        })
+            .then(response => response.json())
+            .then(() => {
+                console.log(`worked`)
+            })
+    }
 
 
-
-// //if the id from setlist matches the setlistId from song, then the song displays in that setlist
-// const addSongToSet = (id) => {
-//     const addingTheSong = filterSongs.filter(song => song.setlistId === setlistId)
-//     setFilterSong(addingTheSong)
-//     .then(() => {
-//         navigate(`/setlists/${id}`)
-//         })
-    
-// }
 
     return <>
         <h2> adding songs</h2>
         <p>Add songs to your setlist</p>
         <article>
             {
-                filterSongs.map(
-                    (song) => {<></>
+                songs.map(
+                    (song) => {
+                        <></>
                         return <div className="song-container">
-                        <div className="song-and-artist">
-                        <h5>{song.name}</h5>
-                        <h6>{song.artist}</h6>
-                        </div>
-                        <button onClick={() => {addedSongs()}}> Add Song</button>
+                            <div className="song-and-artist">
+                                <h5>{song.name}</h5>
+                                <h6>{song.artist}</h6>
+                            </div>
+                            <button onClick={() => { AddingTheSongsToTheSet(song.id) }}> Add Song</button>
                         </div>
                     }
 

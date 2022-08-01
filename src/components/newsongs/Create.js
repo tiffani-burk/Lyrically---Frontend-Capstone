@@ -36,7 +36,6 @@ export const Create = () => {
             key: song.key,
             timeSignature: song.timeSignature,
             lyrics: song.lyrics,
-            setListId: song.setListId
         }
 
 
