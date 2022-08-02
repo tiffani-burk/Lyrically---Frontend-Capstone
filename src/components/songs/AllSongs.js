@@ -4,6 +4,7 @@ import "./Song.css"
 import { useNavigate } from "react-router-dom"
 import { SetListSongs } from "../sets/SetlistSongs"
 import "./songs.css"
+import { AddSongModal } from "../newsongs/AddSongModal"
 
 //create a componenet that will set the initial state variable, fetch the songs from the api, give back the array of the songs from the api and invoke the state var funciton, therefore,
 //adding all the songs to the state variable to an empty array. This function will return a list of the songs, using .map to iterate over the song array and return the name of the song and the artist of the song, accessed with
@@ -13,6 +14,8 @@ export const AllSongs = () => {
 const [songs, setSongs] = useState([])
 //state variable for songs for filtered songs
 const [filteredSongs, setFilteredSongs] = useState([])
+  //create an initial state for my AddSongModal
+  const [openModal, setOpenModal] = useState(false)
 
 //define the current user
 const localLyricUser = localStorage.getItem("lyric_user")
@@ -65,7 +68,8 @@ useEffect(
   
    <div className="add-btn">
    <h2>Song Library</h2>
-   <button  onClick={() => navigate("/create")}>Add a Song</button>
+   <button className="openModalBtn" onClick={() => setOpenModal(true)}> Add Song </button>
+   { openModal && <AddSongModal closeModal={setOpenModal} /> }
    </div>
 
    <article>
@@ -80,7 +84,6 @@ useEffect(
             getAllSongs={getAllSongs} /> 
             ) //getAllSongs does not need () b/c it's not acting as a function in this instance
     }
-   </article>
-   
+   </article>   
    </>
 }

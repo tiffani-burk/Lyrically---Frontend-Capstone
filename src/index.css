@@ -14,9 +14,10 @@ code {
 
 button {
   background-color: rgb(90, 17, 90);
-  border-radius: 8%;
+  border-radius: 8px;
   color: white;
   align-items: center;
+  border: none;
 }
 
 header {
