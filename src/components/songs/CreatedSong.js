@@ -27,6 +27,7 @@ const DeleteSongListItem = (id) => {
             <div><strong>Song: </strong> {name}</div>
             <div><strong>Artist:</strong> {artist}</div>
             </div>
+
             </Link>
             <button onClick={() => { DeleteSongListItem(id)}}>Delete</button>
         </div>

@@ -1,12 +1,12 @@
 import { ImportPopupModal } from "./ImportPopup"
 import "./Import.css"
-import { useState } from "react"
+import { ImportDropDown } from "./ImportDropDown"
+
 
 //this component imports songs "cover songs" from the database
 export const Import = ({setterFunction}) => {
 
-    //create an intial state for my modal
-    const [openModal, setOpenModal] = useState(false)
+
 
     return ( 
         <>
@@ -20,13 +20,17 @@ export const Import = ({setterFunction}) => {
             type="text"
             placeholder="Find a song" 
             />
-        <button className="openModalBtn" onClick={() => {
-            setOpenModal(true)
-        }}>Search songs</button>
+    
         </div>
-       { openModal && <ImportPopupModal closeModal={setOpenModal} />}
+       
+
        </div>
+
+    
         </>
        )
 }
 
+{/* <button className="openModalBtn" onClick={() => {
+    <ImportDropDown />
+}}>Search songs</button> */}

@@ -21,7 +21,6 @@ const [filteredSongs, setFilteredSongs] = useState([])
 const localLyricUser = localStorage.getItem("lyric_user")
 const lyricUserObject = JSON.parse(localLyricUser)
 
-const navigate = useNavigate()
 
 
 //create a function to fetch all of the songs
