@@ -20,10 +20,10 @@ export const NavBar = (props) => {
               <NavLink href="/setlists">Setlists</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/import">Import</NavLink>
+              <NavLink href="/import">Add Cover</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/create">Create</NavLink>
+              <NavLink href="/create">Add Original</NavLink>
             </NavItem>
             <NavItem>
               <NavLink href="/login">Logout</NavLink>

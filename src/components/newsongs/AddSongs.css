@@ -3,3 +3,22 @@
     text-align: center;
     padding: 2rem;
 }
+
+.toggle--button{
+
+    margin-top: 15%;
+    border: none;
+    padding: 1rem;
+    background-color: purple;
+    color: white;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: table;
+  }
+  
+  .toggle--close{
+    background-color: rgb(213, 139, 0)
+  }

@@ -4,6 +4,7 @@
 import { useEffect, useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
 import "./AddSongs.css"
+import { ButtonColorChange } from "./ButtonColorChange"
 
 
 
@@ -12,6 +13,8 @@ export const AddSongsToSet = () => {
     const [songs, getSongs] = useState([])
        //import useNavigate and set it to value of navigate, so we can add it to the button.
    const navigate = useNavigate()
+
+
 
     const setlistId = useParams()
     console.log(setlistId.setlistId)
@@ -52,9 +55,11 @@ export const AddSongsToSet = () => {
         })
             .then(response => response.json())
             .then(() => {
-                console.log(`worked`)
+                // setButtonColor(!buttonColor)
             })
     }
+
+    
 
 //create a function to navigate back to the setlist via id and invoke it in the button "Submit Songs"
 const BackToSet = () => {
@@ -73,17 +78,26 @@ const BackToSet = () => {
                                 <h5>{song.name}</h5>
                                 <h6>{song.artist}</h6>
                             </div>
-                            <button onClick={() => { AddingTheSongsToTheSet(song.id) }}> Add Song</button>
+
+                            <ButtonColorChange 
+                            AddingTheSongsToTheSet={AddingTheSongsToTheSet}
+                            songId={song.id} />
+                            
                         </div>
                     }
 
                 )
+                
             }
         </article>
             <section className="submit-songs-btn">
                 <button onClick={BackToSet}>
                     Submit Songs
                 </button>
+
+                {/* <button onClick={ButtonColor} className={'toggle--button ' + (buttonColor ? 'toggle--close':'')} >{buttonColor ? 'Added' : 'Add Song'}</button> */}
             </section>
     </>
 }
+
+//  <button className={'toggle--button ' + (buttonColor ? 'toggle--close':'')} onClick={() => { AddingTheSongsToTheSet(song.id) }}> {buttonColor ? 'Added' : 'Add Song'}</button> 

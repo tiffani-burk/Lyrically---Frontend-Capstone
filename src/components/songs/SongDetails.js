@@ -42,4 +42,4 @@ return <section className="song-dets">
 }
 
 //Once songDetails is create, it needs to be exported and imported into Main.js to be visually rendored
-//dont forget optional chaining operator ? (song?.name) which means to skip over data  if that data doesnt exist and go to the next thing
+//dont forget optional chaining operator ? (song?.name) which means to skip over data  if that data doesnt exis
