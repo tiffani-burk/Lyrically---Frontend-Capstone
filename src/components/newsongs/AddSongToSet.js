@@ -78,11 +78,11 @@ const BackToSet = () => {
                                 <h5>{song.name}</h5>
                                 <h6>{song.artist}</h6>
                             </div>
-
+                            <div className="color-change-button">
                             <ButtonColorChange 
                             AddingTheSongsToTheSet={AddingTheSongsToTheSet}
                             songId={song.id} />
-                            
+                            </div>
                         </div>
                     }
 
@@ -95,9 +95,7 @@ const BackToSet = () => {
                     Submit Songs
                 </button>
 
-                {/* <button onClick={ButtonColor} className={'toggle--button ' + (buttonColor ? 'toggle--close':'')} >{buttonColor ? 'Added' : 'Add Song'}</button> */}
             </section>
     </>
 }
 
-//  <button className={'toggle--button ' + (buttonColor ? 'toggle--close':'')} onClick={() => { AddingTheSongsToTheSet(song.id) }}> {buttonColor ? 'Added' : 'Add Song'}</button> 

@@ -5,7 +5,7 @@
 }
 
 .toggle--button{
-
+  width: 7rem;
     margin-top: 15%;
     border: none;
     padding: 1rem;
@@ -20,5 +20,8 @@
   }
   
   .toggle--close{
+    width: 7rem;
     background-color: rgb(213, 139, 0)
   }
+
+  
