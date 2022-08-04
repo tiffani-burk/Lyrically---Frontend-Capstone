@@ -82,6 +82,7 @@ const BackToSet = () => {
                             </div>
                             <div className="color-change-button">
                             <ButtonColorChange 
+                            key={ButtonColorChange}
                             AddingTheSongsToTheSet={AddingTheSongsToTheSet}
                             songId={song.id}
                              />
