@@ -1,7 +1,15 @@
-form {margin: 1rem;}
+form {
+    margin: 2rem;
+    background-color: aqua;
+    padding: 2rem;
+    width: 60%;
+    background-color: white;
+}
+
 #lyrics {
     height: 10rem;
 }
+
 .form-control {
     margin-bottom: .5rem;
 }
@@ -18,4 +26,15 @@ form {margin: 1rem;}
     margin-left: auto;
     margin-right: auto;
     display: table;
+}
+
+.formSection {
+    display: flex;
+    justify-content: center;
+}
+
+.headerText {
+    font-family: kalam;
+    display: flex;
+    justify-content: center;
 }

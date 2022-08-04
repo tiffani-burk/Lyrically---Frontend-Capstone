@@ -36,6 +36,8 @@ export const AddSongsToSet = () => {
         []
     )
 
+
+
     //create a function that will take a songid as an arg, will then create an obj that has the songId, the setlistId and song position of 0 and will POST to DB
     const AddingTheSongsToTheSet = (id) => {
         //Create an object to be saved to the API that looks like my object data in songs;
@@ -55,11 +57,11 @@ export const AddSongsToSet = () => {
         })
             .then(response => response.json())
             .then(() => {
-                // setButtonColor(!buttonColor)
+                // navigate(`/songs/${songs.id}`)
             })
     }
 
-    
+
 
 //create a function to navigate back to the setlist via id and invoke it in the button "Submit Songs"
 const BackToSet = () => {
@@ -81,7 +83,9 @@ const BackToSet = () => {
                             <div className="color-change-button">
                             <ButtonColorChange 
                             AddingTheSongsToTheSet={AddingTheSongsToTheSet}
-                            songId={song.id} />
+                            songId={song.id}
+                             />
+                          
                             </div>
                         </div>
                     }

@@ -65,7 +65,8 @@ export const SetListSongs = ({ setlistId }) => {
                         return (
                             <>
                                 <div className="song-container">
-                                    <Link className="view-set-container" to={`/songs/${setlistSong.id}`}>
+                                   
+                                    <Link className="view-set-container" to={`/songs/${setlistSong.songId}`}>
                                         <div className="song-and-artist">
                                             <div> <strong>Name:</strong>  {setlistSong.song.name} </div>
                                             <div> <strong>Artist: </strong> {setlistSong.song.artist}</div>

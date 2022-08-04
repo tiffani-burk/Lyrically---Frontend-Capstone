@@ -62,8 +62,9 @@ export const ImportForm = () => {
     }
 
     return (
-        <form >
-            <h2 >Add A Cover Song</h2>
+        <section className="formSection">
+        <form>
+            <h2 className="headerText" >Add A Cover Song</h2>
             <fieldset>
                 <div>
                     <label htmlFor="name">Song Name:</label>
@@ -120,6 +121,7 @@ export const ImportForm = () => {
 
             
         </form>
+        /</section>
     )
 
 }

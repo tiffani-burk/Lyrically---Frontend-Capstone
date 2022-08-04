@@ -13,6 +13,7 @@ fieldset {
     display: inline-block;
     margin: 0 auto;
     text-align: left;
+   
 }
 
 .form--login > fieldset > input[type="email"] {
@@ -41,22 +42,33 @@ fieldset {
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
-.container--login {
-    text-align: center;
-}
+
 
 .form--login {
     background-position-x: right;
     z-index: 1;
     min-height: 25rem;
-    min-width: 45rem;
-    background-color: hsla(0,0%,100%,0.40);
+    min-width: 35rem;
+    background-color: white;
     background-blend-mode: overlay;
     background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+ 
 }
 
 .button--close {
     position: relative;
-    bottom: -2rem;
 }
 
+.SubBtn {
+    width: 7rem;
+    border: none;
+    padding: 1rem;
+    background-color:purple;
+    color: white;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+    display: table;
+}

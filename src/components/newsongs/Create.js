@@ -62,8 +62,9 @@ export const Create = () => {
     }
 
     return (
-        <form >
-            <h2 >New Song Creation</h2>
+        <section className="formSection">
+        <form className="form" >
+            <h2 className="headerText">New Song Creation</h2>
             <fieldset>
                 <div>
                     <label htmlFor="name">Song Name:</label>
@@ -117,6 +118,7 @@ export const Create = () => {
                 Submit Song
             </button>
         </form>
+        </section>
     )
 
 }

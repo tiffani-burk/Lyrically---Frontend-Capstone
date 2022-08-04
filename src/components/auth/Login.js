@@ -19,7 +19,7 @@ export const Login = () => {
                 if (foundUsers.length === 1) {
                     const user = foundUsers[0]
                     localStorage.setItem("lyric_user", JSON.stringify({
-                        id: user.id            
+                        id: user.id
                     }))
 
                     navigate("/allsongs")
@@ -34,8 +34,8 @@ export const Login = () => {
         <main className="container--login">
             <section>
                 <form className="form--login" onSubmit={handleLogin}>
-                    <h1>Lyrically Login</h1>
-                    <h2>Please sign in</h2>
+                    <h1>Welcome to Lyrically</h1>
+                    <h4>Please sign in</h4>
                     <fieldset>
                         <label htmlFor="inputEmail"> Email address </label>
                         <input type="email"
@@ -45,17 +45,16 @@ export const Login = () => {
                             placeholder="Email address"
                             required autoFocus />
                     </fieldset>
-                    
+                    <Link to="/register">Not a member yet?</Link>
                     <fieldset>
-                        <button type="submit">
+                        <button className="SubBtn" type="submit">
                             Sign in
                         </button>
+
                     </fieldset>
                 </form>
             </section>
-            <section className="link--register">
-                <Link to="/register">Not a member yet?</Link>
-            </section>
+
         </main>
     )
 }

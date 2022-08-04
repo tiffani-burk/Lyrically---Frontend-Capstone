@@ -11,3 +11,12 @@
     margin-right: auto;
     display: table;
 }
+
+.setForm {
+    display: flex;
+    justify-content: center;
+}
+
+.setHeader {
+    font-family: kalam;
+}

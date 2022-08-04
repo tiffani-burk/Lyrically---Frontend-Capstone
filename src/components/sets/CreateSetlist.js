@@ -53,8 +53,9 @@ export const CreateSetlist = () => {
     }
 
     return (
+        <div className="setForm">
         <form>
-            <h2>New Setlist</h2>
+            <h2 className="setHeader">New Setlist</h2>
             <fieldset>
                 <div>
                     <label htmlFor="name">Setlist Name</label>
@@ -89,6 +90,7 @@ export const CreateSetlist = () => {
 
             <button className="CrtSetBtn" onClick={(clickEvent)=> { handleSaveButtonClick(clickEvent)}}>Submit Setlist</button>
         </form>
+        </div>
     )
 }
 
