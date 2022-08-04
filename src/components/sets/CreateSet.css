@@ -1,12 +1,4 @@
-form {margin: 1rem;}
-#lyrics {
-    height: 10rem;
-}
-.form-control {
-    margin-bottom: .5rem;
-}
-
-.SubmitBtn {
+.CrtSetBtn {
     width: 10rem;
     border: none;
     padding: 1rem;

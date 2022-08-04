@@ -1,5 +1,4 @@
-
-
+import "./songs.css"
 import { Link } from "react-router-dom"
 
 
@@ -31,7 +30,9 @@ const DeleteSongListItem = (id) => {
             </div>
 
             </Link>
+            <div className="allSong-delete">
             <button onClick={() => { DeleteSongListItem(id)}}>Delete</button>
+            </div>
         </div>
     </section>
 }

@@ -1,0 +1,15 @@
+.song-dets {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+  
+}
+
+.songContainer {
+    background-color: rgb(255, 255, 255);
+    width: 50%;
+    padding: 2rem;
+    box-shadow: 5px 5px 5px grey;
+}

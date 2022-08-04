@@ -16,5 +16,4 @@ export const ButtonColorChange = ({AddingTheSongsToTheSet, songId}) => {
 return (
     <button className={'toggle--button ' + (buttonColor ? 'toggle--close':'')} onClick={() => { AddingTheSongsToTheSet(songId, ButtonColor()) }}>{buttonColor ? 'Added' : 'Add Song'} </button>
 )
-
 }

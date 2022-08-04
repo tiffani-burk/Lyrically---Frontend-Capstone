@@ -59,7 +59,7 @@ export const AllSets = () => {
            <div className="header-btn-container">
            <h2>Setlists</h2>
            <div className="add-btn">
-           <button onClick={()=> {navigate(`/setlists/create`)}}>Add Setlist</button>
+           <button className="AddSetBtn" onClick={()=> {navigate(`/setlists/create`)}}>Add Setlist</button>
            </div>
            </div>
            <article>

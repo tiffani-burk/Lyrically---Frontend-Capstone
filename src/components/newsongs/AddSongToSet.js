@@ -91,7 +91,7 @@ const BackToSet = () => {
             }
         </article>
             <section className="submit-songs-btn">
-                <button onClick={BackToSet}>
+                <button className="AddToSetBtn" onClick={BackToSet}>
                     Submit Songs
                 </button>
 

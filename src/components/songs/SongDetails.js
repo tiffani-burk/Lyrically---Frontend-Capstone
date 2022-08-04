@@ -1,6 +1,6 @@
 // //create a component to display the details; we will neeed to access just the song, based on the songId, using a fetch statement. 
 // //return the JSX (html rep) that displays name, lyrics, artist and key of each song
-
+import "./SongDetails.css"
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 
@@ -29,13 +29,13 @@ export const SongDetails = () => {
     )
     //return JSX that returns the name, address and phone of the customer 
 return <section className="song-dets">
-    <h3>Song Details</h3>
-    <div><strong>Name: </strong>{song?.name} </div> 
-    <div><strong>Artist: </strong>{song?.artist} </div>
-    <div><strong>Key: </strong>{song?.key} </div>
-    <div><strong>Time Signature: </strong>{song?.timeSignature} </div>
-    <div><strong>Lyrics: </strong></div> <div className="lyrics">{song?.lyrics} </div>
-
+    <div className="songContainer">
+        <div><h3><strong></strong>{song?.name}</h3> </div> 
+        <div><strong>Artist: </strong>{song?.artist} </div>
+        <div><strong>Key: </strong>{song?.key} </div>
+        <div><strong>Time Signature: </strong>{song?.timeSignature} </div>
+        <div><strong>Lyrics: </strong></div> <div className="lyrics">{song?.lyrics} </div>
+    </div>
 </section>
 
 

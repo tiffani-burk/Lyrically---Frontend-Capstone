@@ -13,6 +13,7 @@ import { CreateSetlist } from "../sets/CreateSetlist"
 import { SetDetails } from "../sets/SetDetails"
 import { AllSongs } from "../songs/AllSongs"
 import { SongDetails } from "../songs/SongDetails"
+import "./Main.css"
 
 
 //create a component to return my Routes 
@@ -25,8 +26,8 @@ export const Main = () => {
                 <header>
                     {<NavBar />}
                     <div className="logo">
-                        <h1>Lyrically</h1>
-                        <h6>Your digital setlist...</h6>
+                        <h1 className="logoName">Lyrically</h1>
+                        <h5 className="slogan">YOUR DIGITAL SETLIST.</h5>
                     </div>
                     </header>
                     <Outlet />

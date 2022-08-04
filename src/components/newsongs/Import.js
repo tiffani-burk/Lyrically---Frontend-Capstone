@@ -114,7 +114,7 @@ export const ImportForm = () => {
                 </div>
             </fieldset>
 
-            <button onClick={(clickEvent) => { handleSaveButtonClick(clickEvent) }}>
+            <button className="SubmitBtn" onClick={(clickEvent) => { handleSaveButtonClick(clickEvent) }}>
                 Submit Song
             </button>
 

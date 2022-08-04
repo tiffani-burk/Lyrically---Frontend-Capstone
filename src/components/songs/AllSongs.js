@@ -2,9 +2,6 @@
 
 import { useEffect, useState } from "react"
 import { CreatedSong } from "./CreatedSong"
-import "./Song.css"
-import { useNavigate } from "react-router-dom"
-import { SetListSongs } from "../sets/SetlistSongs"
 import "./songs.css"
 import { AddSongModal } from "../newsongs/AddSongModal"
 
@@ -23,7 +20,7 @@ export const AllSongs = () => {
     const localLyricUser = localStorage.getItem("lyric_user")
     const lyricUserObject = JSON.parse(localLyricUser)
 
-    
+
 
     //create a function to fetch all of the songs
     const getAllSongs =
@@ -43,7 +40,6 @@ export const AllSongs = () => {
         []
     )
 
-
     //create another useEffect and state var to check if the userId matches the userId on the song
     //step 1, create another state variable for filteredSongs
     //step 2, create a useEffect to filter through the songs and match the song.userId to the lyricUserObject.id
@@ -57,9 +53,6 @@ export const AllSongs = () => {
         [songs]
     )
 
-
-
-
     //return JXS list of all the songs, displaying the name and artist
     //add a button that will navigate to the create song page with the song form
     //use .map to loop through the above array of songs, which is is being stored to the "songs" variable
@@ -67,10 +60,12 @@ export const AllSongs = () => {
     //dont forget to add a unique react key, since we are iterating with .map
     return <>
 
-        <div className="add-btn">
+        <div className="SongLibSection">
             <h2>Song Library</h2>
+            
             <button className="openModalBtn" onClick={() => setOpenModal(true)}> Add Song </button>
             {openModal && <AddSongModal closeModal={setOpenModal} />}
+           
         </div>
 
         <article>
