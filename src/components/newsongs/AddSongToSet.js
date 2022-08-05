@@ -4,6 +4,7 @@
 import { useEffect, useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
 import "./AddSongs.css"
+import { ButtonColorChange } from "./ButtonColorChange"
 
 
 
@@ -12,6 +13,8 @@ export const AddSongsToSet = () => {
     const [songs, getSongs] = useState([])
        //import useNavigate and set it to value of navigate, so we can add it to the button.
    const navigate = useNavigate()
+
+
 
     const setlistId = useParams()
     console.log(setlistId.setlistId)
@@ -33,6 +36,8 @@ export const AddSongsToSet = () => {
         []
     )
 
+
+
     //create a function that will take a songid as an arg, will then create an obj that has the songId, the setlistId and song position of 0 and will POST to DB
     const AddingTheSongsToTheSet = (id) => {
         //Create an object to be saved to the API that looks like my object data in songs;
@@ -52,9 +57,11 @@ export const AddSongsToSet = () => {
         })
             .then(response => response.json())
             .then(() => {
-                console.log(`worked`)
+                // navigate(`/songs/${songs.id}`)
             })
     }
+
+
 
 //create a function to navigate back to the setlist via id and invoke it in the button "Submit Songs"
 const BackToSet = () => {
@@ -73,17 +80,27 @@ const BackToSet = () => {
                                 <h5>{song.name}</h5>
                                 <h6>{song.artist}</h6>
                             </div>
-                            <button onClick={() => { AddingTheSongsToTheSet(song.id) }}> Add Song</button>
+                            <div className="color-change-button">
+                            <ButtonColorChange 
+                            key={ButtonColorChange}
+                            AddingTheSongsToTheSet={AddingTheSongsToTheSet}
+                            songId={song.id}
+                             />
+                          
+                            </div>
                         </div>
                     }
 
                 )
+                
             }
         </article>
             <section className="submit-songs-btn">
-                <button onClick={BackToSet}>
+                <button className="AddToSetBtn" onClick={BackToSet}>
                     Submit Songs
                 </button>
+
             </section>
     </>
 }
+

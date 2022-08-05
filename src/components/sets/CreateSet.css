@@ -1,20 +1,4 @@
-form {
-    margin: 2rem;
-    background-color: aqua;
-    padding: 2rem;
-    width: 60%;
-    background-color: white;
-}
-
-#lyrics {
-    height: 10rem;
-}
-
-.form-control {
-    margin-bottom: .5rem;
-}
-
-.SubmitBtn {
+.CrtSetBtn {
     width: 10rem;
     border: none;
     padding: 1rem;
@@ -28,13 +12,11 @@ form {
     display: table;
 }
 
-.formSection {
+.setForm {
     display: flex;
     justify-content: center;
 }
 
-.headerText {
+.setHeader {
     font-family: kalam;
-    display: flex;
-    justify-content: center;
 }

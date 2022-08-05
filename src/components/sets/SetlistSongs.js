@@ -10,10 +10,10 @@ import "./allSets.css"
 //create a useEffect to filter through the songs in the setlist invoke getAllSongs in 
 
 
-export const SetListSongs = ({setlistId }) => {
+export const SetListSongs = ({ setlistId }) => {
     //create initial useState for songs
     const [setlistSongs, setSetListSongs] = useState([])
-    
+
     //add a navigate for the button that will be adding songs to a specific set
     const navigate = useNavigate()
 
@@ -27,55 +27,58 @@ export const SetListSongs = ({setlistId }) => {
     }
 
 
-//set the songs
+    //set the songs
     useEffect(
         () => {
             GetSetListSongs()
         },
         []
     )
-        
-  //create another useEffect to watch for a deleted song
-    const deletedSong = (item) =>{
+
+    //create another useEffect to watch for a deleted song
+    const deletedSong = (item) => {
         fetch(`http://localhost:8088/setListSongs/${item.id}`, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json"
             }
         })
-        .then(response => response.json())
-        .then(() => {
-          console.log(`deleted songs`)
-            GetSetListSongs()
-        })
+            .then(response => response.json())
+            .then(() => {
+                console.log(`deleted songs`)
+                GetSetListSongs()
+            })
     }
 
-  
+
     //return JXS list of songs in the setlist
     return <>
 
         <div className="add-container">
-        <button className="add-btn" onClick={()=> {navigate(`/setlist/addsongs/${setlistId}`)}}>Add Song</button>
+            <button className="AddSongBtn" onClick={() => { navigate(`/setlist/addsongs/${setlistId}`) }}>Add Song</button>
         </div>
         <article>
             {
-                setlistSongs.map((setlistSong) =>
-                {   if (setlistSong.setListId === parseInt(setlistId)) {
-                
-                     return (
-                    <>
-                    <div className="song-container">
-                        <Link className="view-set-container" to={`/songs/${setlistSong.id}`}>
-                        <div className="song-and-artist">
-                            <div> <strong>Name:</strong>  {setlistSong.song.name} </div>
-                            <div> <strong>Artist: </strong> {setlistSong.song.artist}</div>
-                        </div>
-                        </Link>
+                setlistSongs.map((setlistSong) => {
+                    if (setlistSong.setListId === parseInt(setlistId)) {
 
-                    <button onClick={() => {deletedSong(setlistSong)} }>Delete</button>
-                    </div>
-                    </> )
-                    }}
+                        return (
+                            <>
+                                <div className="song-container">
+                                   
+                                    <Link className="view-set-container" to={`/songs/${setlistSong.songId}`}>
+                                        <div className="song-and-artist">
+                                            <div> <strong>Name:</strong>  {setlistSong.song.name} </div>
+                                            <div> <strong>Artist: </strong> {setlistSong.song.artist}</div>
+                                        </div>
+                                    </Link>
+                                    <div>
+                                        <button className="DeleteBtn" onClick={() => { deletedSong(setlistSong) }}>Delete</button>
+                                    </div>
+                                </div>
+                            </>)
+                    }
+                }
                 )
             }
         </article>

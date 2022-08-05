@@ -39,7 +39,7 @@ export const SetDetails = () => {
         <div>Date: {set?.gigDate}</div>
         <div>Location: {set?.gigLocation}</div>
         </div>
-        <div> <SetListSongs setlistId={setlistId} /> </div>
+        <div> <SetListSongs  setlistId={setlistId} /> </div>
     </section>
 
 }

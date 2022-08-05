@@ -2,6 +2,7 @@
 //setlist form
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
+import "./CreateSet.css"
 
 export const CreateSetlist = () => {
     //set initial state variable to the value of an object with default values for the key values that the user will input later
@@ -52,8 +53,9 @@ export const CreateSetlist = () => {
     }
 
     return (
+        <div className="setForm">
         <form>
-            <h2>New Setlist</h2>
+            <h2 className="setHeader">New Setlist</h2>
             <fieldset>
                 <div>
                     <label htmlFor="name">Setlist Name</label>
@@ -86,8 +88,9 @@ export const CreateSetlist = () => {
 
             </fieldset>
 
-            <button onClick={(clickEvent)=> { handleSaveButtonClick(clickEvent)}}>Submit Setlist</button>
+            <button className="CrtSetBtn" onClick={(clickEvent)=> { handleSaveButtonClick(clickEvent)}}>Submit Setlist</button>
         </form>
+        </div>
     )
 }
 

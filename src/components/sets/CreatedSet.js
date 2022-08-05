@@ -3,6 +3,7 @@
 //dont forget to set up a Route that pairs with the "to" Link
 
 import { Link } from "react-router-dom"
+import "./allSets.css"
 
 
 
@@ -35,7 +36,9 @@ export const CreatedSet = ({ id, name, gigDate, gigLocation, getAllSets }) => {
             </div>
 
             </Link>
-            <button onClick={() => { DeleteSetlist(id) }}>Delete</button>
+            <div>
+            <button className="DeleteBtn" onClick={() => { DeleteSetlist(id) }}>Delete</button>
+            </div>
         </div>
     </section>
 }
