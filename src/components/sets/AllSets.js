@@ -76,5 +76,3 @@ export const AllSets = () => {
            </article>
            </>
 }
-//TO DO: Create the key represention of the songs on the setlist
-//Do I expand on the songs array and create an if statement to match the song.setListId to the setlist.id
