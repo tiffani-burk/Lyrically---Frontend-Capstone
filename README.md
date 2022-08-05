@@ -23,8 +23,8 @@ Musicians, Singers, Songwriters
 
 ### `Wireframe`
 Clickable wireframe created with Figma
-[wireframe-lyrically on black.pdf](https://github.com/tiffani-burk/lyrically/files/9270295/wireframe-lyrically.on.black.pdf)
+![wireframe-lyrically on black](https://user-images.githubusercontent.com/99150447/183122634-d551ca83-8fa6-4da9-99f8-80a881e9bc43.png)
 
 ### `ERD`
-[ERD-Lyrically.pdf](https://github.com/tiffani-burk/lyrically/files/9270279/ERD-Lyrically.pdf)
+![ERD-Lyrically](https://user-images.githubusercontent.com/99150447/183122445-ec52df6a-6b9a-4725-8ab6-af61ef3c97b4.png)
 
