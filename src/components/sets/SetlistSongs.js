@@ -65,11 +65,11 @@ export const SetListSongs = ({ setlistId }) => {
                         return (
                             <>
                                 <div className="song-container">
-                                   
-                                    <Link style={{textDecoration:'none'}} className="view-set-container" to={`/songs/${setlistSong.songId}`}>
-                                        <div className="song-and-artist">
-                                            <div>  {setlistSong.song.name} </div>
-                                            <div> <strong>Artist: </strong> {setlistSong.song.artist}</div>
+
+                                    <Link style={{textDecoration: 'none'}} className="view-set-container" to={`/songs/${setlistSong.songId}`}>
+                                        <div className="song-and-artist-container">
+                                            <h3> <strong> {setlistSong.song.name}</strong> </h3>
+                                            <div>  {setlistSong.song.artist}</div>
                                         </div>
                                     </Link>
                                     <div>
@@ -87,5 +87,4 @@ export const SetListSongs = ({ setlistId }) => {
 }
 
 
-//
-//invoke that component inside the button onclick
+
