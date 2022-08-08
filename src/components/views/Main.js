@@ -24,10 +24,12 @@ export const Main = () => {
             <Route path="/" element={
                 <>
                 <header>
-                    {<NavBar />}
-                    <div className="logo">
+                    <div className="header-div">
+                        {<NavBar />}
+                        <div className="logo">
                         <h1 className="logoName">Lyrically</h1>
                         <h5 className="slogan">YOUR DIGITAL SETLIST.</h5>
+                        </div>
                     </div>
                     </header>
                     <Outlet />

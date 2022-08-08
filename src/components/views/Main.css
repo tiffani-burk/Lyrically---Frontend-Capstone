@@ -1,24 +1,27 @@
 
 .slogan {
-    font-family: 'Source Sans Pro', sans-serif;
-    margin-top: 0;
-    color: darkorchid;
-  
-  }
+  font-family: 'Source Sans Pro', sans-serif;
+  margin-top: 0;
+  color: darkorchid;
 
-  .logoName {
-    font-family: 'Vintage Goods';
-    font-size:  4rem;
-    margin-bottom: 0;
-    color: white;
-  }
+}
 
-  header {
-    background-color: rgb(29, 28, 28);
-  }
+.logoName {
+  font-family: 'Vintage Goods';
+  font-size:  4rem;
+  margin-bottom: 0;
+  color: white;
+}
 
-  .logo {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-  }
+header {
+  background-color: rgb(29, 28, 28);
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-div {
+width: 100%;
+}
