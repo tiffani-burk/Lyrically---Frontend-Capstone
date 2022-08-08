@@ -1,70 +1,29 @@
-# Getting Started with Create React App
+# Lyrically 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### `Overview`
 
-## Available Scripts
+This is a single page web based application that allows the user to create a digital setlist. The user can create a song, by adding their lyrics into a form, which then rendors the song to their song library. They can view that song, which dynamically rendors the name, artist, key, timing and lyrics of the song. The user can also create or delete a setlist and store their choice of songs to that setlist. They have the option to add as many songs and setlists as they would like. 
 
-In the project directory, you can run:
+### `Problem Solved`
 
-### `npm start`
+This application solves a problem for musicians, which is that they can't store original songs (songs they wrote) and cover songs (songs other people wrote) in one place. Lyrically allows the user to store both covers and originals in one place. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### `Development`
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+This project was developed using React, HTML and CSS
 
-### `npm test`
+### `Target Users`
+Musicians, Singers, Songwriters
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### `Images`
 
-### `npm run build`
+![ipad-air-2-mockup-with-a-colorful-background-25048](https://user-images.githubusercontent.com/99150447/183120377-da0e3290-f8df-40cf-8656-117d8529418a.png)
+<img width="615" alt="Screen Shot 2022-08-04 at 9 17 22 PM" src="https://user-images.githubusercontent.com/99150447/183120837-933c33f2-3a18-4042-9170-f0832f099c40.png">
+<img width="616" alt="Screen Shot 2022-08-04 at 9 17 56 PM" src="https://user-images.githubusercontent.com/99150447/183120850-79b656bc-ca28-4c6b-97db-0446b43ac5b4.png">
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### `Wireframe`
+Clickable wireframe created with Figma
+![wireframe-lyrically on black](https://user-images.githubusercontent.com/99150447/183122634-d551ca83-8fa6-4da9-99f8-80a881e9bc43.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### `ERD`
+![ERD-Lyrically](https://user-images.githubusercontent.com/99150447/183122445-ec52df6a-6b9a-4725-8ab6-af61ef3c97b4.png)
