@@ -14,6 +14,7 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        height: 10vh;
     }
     
     .add-container {
@@ -80,4 +81,4 @@
     .song-and-artist {
         color: black;
     }
-    
+

@@ -61,12 +61,15 @@ export const AllSongs = () => {
     return <>
 
         <div className="SongLibSection">
-            <h2>Song Library</h2>
-            
-            <button className="openModalBtn" onClick={() => setOpenModal(true)}> Add Song </button>
-            {openModal && <AddSongModal closeModal={setOpenModal} />}
-           
+            <div className="left-container">
+                <h2>Song Library</h2>
+            </div>
+            {/* <div className="right-container"> */}
+                <button className="openModalBtn" onClick={() => setOpenModal(true)}> Add Song </button>
+                {openModal && <AddSongModal closeModal={setOpenModal} />}
+            {/* </div> */}
         </div>
+           
 
         <article>
             {
