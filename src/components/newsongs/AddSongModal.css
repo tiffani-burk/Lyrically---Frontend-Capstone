@@ -1,7 +1,7 @@
 .modalBackground {
   width: 100vw;
   height: 80vh;
-  background-color: rgba(200, 200, 200);
+  backdrop-filter: blur(6px);
   position: fixed;
   display: flex;
   justify-content: center;
