@@ -16,14 +16,15 @@ This project was developed using React, HTML and CSS
 Musicians, Singers, Songwriters
 
 ### `Images`
-![ipad-pro-mockup-in-portrait-position-23622](https://user-images.githubusercontent.com/99150447/183730161-d7b39351-d908-4573-bba2-3612ca005504.png)
-![ipad-pro-mockup-in-portrait-position-23622 copy 6](https://user-images.githubusercontent.com/99150447/183733122-14b8afa5-c850-41a8-90e5-14d997c1e11e.png)
-![ipad-pro-mockup-in-portrait-position-23622 copy](https://user-images.githubusercontent.com/99150447/183733141-7e36de36-2226-4e58-be3b-1db9d9d7ce41.png)
+![ipad-pro-mockup-in-portrait-position-23622](https://user-images.githubusercontent.com/99150447/183754542-3b90149e-9a0c-4083-ae8e-8c3fc7a82c8f.png)
+![ipad-pro-mockup-in-portrait-position-23622 (1)](https://user-images.githubusercontent.com/99150447/183754642-679c9c74-4358-4ac8-97a4-9e0a19e10694.png)
+![ipad-pro-mockup-in-portrait-position-23622 (2)](https://user-images.githubusercontent.com/99150447/183755659-a046b439-f108-4514-98fa-9de5f2d02988.png)
+![ipad-pro-mockup-in-portrait-position-23622 copy 2](https://user-images.githubusercontent.com/99150447/183755539-2756e620-9121-4440-a749-4cd5ff4ff622.png)
+![ipad-pro-mockup-in-portrait-position-23622 (3)](https://user-images.githubusercontent.com/99150447/183754931-d1658771-01bb-4b38-bc17-ee961c2e29e7.png)
+![ipad-pro-mockup-in-portrait-position-23622 copy](https://user-images.githubusercontent.com/99150447/183754949-6bb9ee93-04d4-4703-821a-3e74fabf6756.png)
+![ipad-pro-mockup-in-portrait-position-23622 copy 4](https://user-images.githubusercontent.com/99150447/183754965-03d5da18-6fab-4b47-8139-c86498d40883.png)
+![ipad-pro-mockup-in-portrait-position-23622 copy 3](https://user-images.githubusercontent.com/99150447/183754993-7f80f60a-1bc0-4726-85e3-fc53e2477ec5.png)
 
-![ipad-pro-mockup-in-portrait-position-23622 copy 3](https://user-images.githubusercontent.com/99150447/183733227-a8bbc694-8692-4178-b8db-85fdf9b4716f.png)
-![ipad-pro-mockup-in-portrait-position-23622 copy 4](https://user-images.githubusercontent.com/99150447/183733243-62a5ec38-9ea8-4385-9bd2-8967c7d31bcd.png)
-![ipad-pro-mockup-in-portrait-position-23622 copy 7](https://user-images.githubusercontent.com/99150447/183733267-41c289d9-ab62-44ed-b51d-2065887f378d.png)
-![ipad-pro-mockup-in-portrait-position-23622 copy 5](https://user-images.githubusercontent.com/99150447/183733330-c520059b-f182-49c4-a997-301b1a5cdea8.png)
 
 
 ### `Wireframe`
