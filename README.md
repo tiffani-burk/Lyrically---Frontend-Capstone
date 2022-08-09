@@ -16,10 +16,15 @@ This project was developed using React, HTML and CSS
 Musicians, Singers, Songwriters
 
 ### `Images`
+![ipad-pro-mockup-in-portrait-position-23622](https://user-images.githubusercontent.com/99150447/183730161-d7b39351-d908-4573-bba2-3612ca005504.png)
+![ipad-pro-mockup-in-portrait-position-23622 copy 6](https://user-images.githubusercontent.com/99150447/183733122-14b8afa5-c850-41a8-90e5-14d997c1e11e.png)
+![ipad-pro-mockup-in-portrait-position-23622 copy](https://user-images.githubusercontent.com/99150447/183733141-7e36de36-2226-4e58-be3b-1db9d9d7ce41.png)
 
-![ipad-air-2-mockup-with-a-colorful-background-25048](https://user-images.githubusercontent.com/99150447/183120377-da0e3290-f8df-40cf-8656-117d8529418a.png)
-<img width="615" alt="Screen Shot 2022-08-04 at 9 17 22 PM" src="https://user-images.githubusercontent.com/99150447/183120837-933c33f2-3a18-4042-9170-f0832f099c40.png">
-<img width="616" alt="Screen Shot 2022-08-04 at 9 17 56 PM" src="https://user-images.githubusercontent.com/99150447/183120850-79b656bc-ca28-4c6b-97db-0446b43ac5b4.png">
+![ipad-pro-mockup-in-portrait-position-23622 copy 3](https://user-images.githubusercontent.com/99150447/183733227-a8bbc694-8692-4178-b8db-85fdf9b4716f.png)
+![ipad-pro-mockup-in-portrait-position-23622 copy 4](https://user-images.githubusercontent.com/99150447/183733243-62a5ec38-9ea8-4385-9bd2-8967c7d31bcd.png)
+![ipad-pro-mockup-in-portrait-position-23622 copy 7](https://user-images.githubusercontent.com/99150447/183733267-41c289d9-ab62-44ed-b51d-2065887f378d.png)
+![ipad-pro-mockup-in-portrait-position-23622 copy 5](https://user-images.githubusercontent.com/99150447/183733330-c520059b-f182-49c4-a997-301b1a5cdea8.png)
+
 
 ### `Wireframe`
 Clickable wireframe created with Figma
