@@ -4,7 +4,7 @@ body {
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(232, 232, 234);
+  background-color: #e8e8ea;
 
 }
 
@@ -14,9 +14,9 @@ code {
 }
 
 button {
-  background-color: rgb(90, 17, 90);
+  background-color: #5a115a;
   border-radius: 8px;
-  color: white;
+  color: #ffffff;
   align-items: center;
   border: none;
 
@@ -43,7 +43,6 @@ header {
 
 h2 {
   margin: 1rem;
-  /* font-family: 'Kalam', cursive; */
   font-family: 'Source Sans Pro', sans-serif;
 
 }

@@ -17,7 +17,7 @@
     background-color: purple;
     color: white;
     cursor: pointer;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: #00000059 0px 5px 15px;
     border-radius: 10px;
     display: table;
     margin: 3rem 1rem 0rem 1rem;
@@ -41,7 +41,7 @@
 }
 
 .song-container {
-    border: 1px solid lightgrey;
+    border: 1px solid #d3d3d3;
     display: flex;
     justify-content: space-between;
     padding: 1rem;

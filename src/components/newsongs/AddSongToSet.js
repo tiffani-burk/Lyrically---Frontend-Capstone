@@ -69,7 +69,7 @@ const BackToSet = () => {
 }
 
     return <>
-        <h2> Add Songs to Your Setlist</h2>
+        <h2 className="header-addsongs"> Add Songs to Your Setlist</h2>
         <article>
             {
                 songs.map(

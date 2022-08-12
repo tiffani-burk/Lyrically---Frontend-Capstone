@@ -104,7 +104,7 @@ export const Create = () => {
                         value={song.timeSignature} />
 
                     <label htmlFor="lyrics">Lyrics:</label>
-                    <input onChange={updateSong}
+                    <textarea onChange={updateSong}
                         required autoFocus
                         type="text"
                         id="lyrics"

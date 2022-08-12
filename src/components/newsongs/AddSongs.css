@@ -21,7 +21,7 @@
   
   .toggle--close{
     width: 7rem;
-    background-color: rgb(213, 139, 0)
+    background-color: #d58b00
   }
 
   .AddToSetBtn {
@@ -38,3 +38,6 @@
     display: table;
   }
   
+  .header-addsongs {
+    margin-bottom: 4rem;
+  }
