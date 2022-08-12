@@ -28,7 +28,7 @@ export const Main = () => {
                         {<NavBar />}
                         <div className="logo">
                         <h1 className="logoName">Lyrically</h1>
-                        <h5 className="slogan">YOUR DIGITAL SETLIST.</h5>
+                        <h5 className="slogan">YOUR DIGITAL SETLIST</h5>
                         </div>
                     </div>
                     </header>

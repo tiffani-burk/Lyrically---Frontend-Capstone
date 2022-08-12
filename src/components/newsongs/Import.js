@@ -121,7 +121,7 @@ export const ImportForm = () => {
 
             
         </form>
-        /</section>
+        </section>
     )
 
 }
