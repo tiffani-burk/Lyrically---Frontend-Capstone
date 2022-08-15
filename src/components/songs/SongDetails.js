@@ -36,6 +36,7 @@ export const SongDetails = () => {
             <div><strong>Time Signature: </strong>{song?.timeSignature} </div>
             <div><strong>Lyrics: </strong></div> <div className="lyrics">{song?.lyrics} </div>
         </div>
+        <button>next</button>
     </section>
 
 }
