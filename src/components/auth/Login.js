@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom"
 import "./Login.css"
 
+
+
 export const Login = () => {
     const [email, set] = useState("jane@gmail.com")
     const navigate = useNavigate()
@@ -32,10 +34,13 @@ export const Login = () => {
 
     return (
         <main className="container--login">
-            <section>
+            <section className="login-sec">
+            <div className="gif">
+                        <img src="./logo.gif" alt="" />
+                    </div>
                 <form className="form--login" onSubmit={handleLogin}>
-                    <h1>Welcome to Lyrically</h1>
-                    <h4>Please sign in</h4>
+                 
+            
                     <fieldset>
                         <label htmlFor="inputEmail"> Email address </label>
                         <input type="email"

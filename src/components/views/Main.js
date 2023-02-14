@@ -21,34 +21,35 @@ import "./Main.css"
 export const Main = () => {
     return (
         <Routes>
+            <Route path="/login" element={<Login />}></Route>
             <Route path="/" element={
                 <>
-                <header>
-                    <div className="header-div">
-                        {<NavBar />}
-                        <div className="logo">
-                        <h1 className="logoName">Lyrically</h1>
-                        <h5 className="slogan">YOUR DIGITAL SETLIST</h5>
+                    <header>
+                        <div className="header-div">
+                            {<NavBar />}
+                            <div className="logo">
+                                <h1 className="logoName">Lyrically</h1>
+                                <h5 className="slogan">YOUR DIGITAL SETLIST</h5>
+                            </div>
                         </div>
-                    </div>
                     </header>
                     <Outlet />
                 </>
             }>
 
-                <Route path="/login" element={<Login />}></Route>
+
                 <Route path="/register" element={<Register />}></Route>
                 <Route path="/allsongs" element={<AllSongs />}></Route>
                 <Route path="/setlists" element={<AllSets />}></Route>
                 <Route path="/import" element={< ImportForm />}></Route>
                 <Route path="/create" element={<Create />}></Route>
                 <Route path="/songs/:songId" element={<SongDetails />}></Route>
-                <Route path="/setlists/:setlistId" element={<SetDetails/>}></Route>
+                <Route path="/setlists/:setlistId" element={<SetDetails />}></Route>
                 <Route path="/setlists/create" element={<CreateSetlist />}></Route>
-                <Route path="setlist/addsongs/:setlistId" element={<AddSongsToSet />}></Route> 
-            
-            </Route> 
-               
+                <Route path="setlist/addsongs/:setlistId" element={<AddSongsToSet />}></Route>
+
+            </Route>
+
         </Routes>
     )
 }
