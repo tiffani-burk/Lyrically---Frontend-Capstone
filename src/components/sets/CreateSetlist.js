@@ -63,6 +63,7 @@ export const CreateSetlist = () => {
                     required autoFocus
                     type="text"
                     id="name"
+                    autoComplete="off"
                     className="form-control"
                     placeholder="Insert setlist name..."
                     value={setlist.name} />
@@ -72,6 +73,7 @@ export const CreateSetlist = () => {
                     required autoFocus
                     type="text"
                     id="gigDate"
+                    autoComplete="off"
                     className="form-control"
                     placeholder="Date..."
                     value={setlist.gigDate} />
@@ -81,6 +83,7 @@ export const CreateSetlist = () => {
                     required autoFocus
                     type="text"
                     id="gigLocation"
+                    autoComplete="off"
                     className="form-control"
                     placeholder="Location of gig..."
                     value={setlist.gigLocation} />

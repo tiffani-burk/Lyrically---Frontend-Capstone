@@ -72,6 +72,7 @@ export const ImportForm = () => {
                         required autoFocus
                         type="text"
                         id="name"
+                        autoComplete="off"
                         className="form-control"
                         placeholder="What's the name of your song?"
                         value={song.name} />
@@ -81,6 +82,7 @@ export const ImportForm = () => {
                         required autoFocus
                         type="text"
                         id="artist"
+                        autoComplete="off"
                         className="form-control"
                         placeholder="Who wrote this song?"
                         value={song.artist} />
@@ -90,6 +92,7 @@ export const ImportForm = () => {
                         required autoFocus
                         type="text"
                         id="key"
+                        autoComplete="off"
                         className="form-control"
                         placeholder="Song key"
                         value={song.key} />
@@ -99,6 +102,7 @@ export const ImportForm = () => {
                         required autoFocus
                         type="text"
                         id="timeSignature"
+                        autoComplete="off"
                         className="form-control"
                         placeholder="Timing?"
                         value={song.timeSignature} />
@@ -108,6 +112,7 @@ export const ImportForm = () => {
                         required autoFocus
                         type="text"
                         id="lyrics"
+                        autoComplete="off"
                         placeholder="Copy and paste a cover song in here."
                         className="form-control"
                         value={song.lyrics} />
