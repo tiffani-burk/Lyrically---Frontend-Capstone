@@ -36,10 +36,11 @@ export const SongDetails = () => {
             <div><strong>Time Signature: </strong>{song?.timeSignature} </div>
             <div><strong>Lyrics: </strong></div> <div className="lyrics">{song?.lyrics} </div>
         </div>
-        <button>next</button>
+       
     </section>
 
 }
+// next button to be added
 
 //Once songDetails is create, it needs to be exported and imported into Main.js to be visually rendored
 //dont forget optional chaining operator ? (song?.name) which means to skip over data  if that data doesnt exis
